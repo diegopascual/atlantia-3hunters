@@ -9,11 +9,11 @@ const ListOfBeers = () => {
   return (
     <div className={styles.beersGrid}>
       <div className={styles.titlesGrid}>
-        <p className="item">Nombre</p>
-        <p className="item">SKU</p>
-        <p className="item">% Presencia</p>
-        <p className="item">Av. Price</p>
-        <p className="item">Av. Position</p>
+        <p className={`${styles.gridTitle} item`}>Nombre</p>
+        <p className={`${styles.gridTitle} item`}>SKU</p>
+        <p className={`${styles.gridTitle} item`}>% Presencia</p>
+        <p className={`${styles.gridTitle} item`}>Av. Price</p>
+        <p className={`${styles.gridTitle} item`}>Av. Position</p>
       </div>
       {beers.map((beer) => (
         <div key={beer.id} className={styles.gridRow}>
@@ -23,14 +23,19 @@ const ListOfBeers = () => {
               alt={beer.name}
               className={styles.beerImg}
             />
-            <p>{beer.name}</p>
+            <p className={`${styles.beerName} item`}>{beer.name}</p>
           </div>
-          <div className={styles.cell}>
-            <p>{beer.sku}</p>
-          </div>
-          <p>{formatPersistence(beer.persistence)}</p>
-          <p>{formatPrice(beer.averagePrice)}</p>
-          <p>{beer.averagePosition}</p>
+          <p className={`${styles.beerText} item`}>{beer.sku}</p>
+          <p
+            style={{ color: beer.persistence < 0 ? "#D6215B" : "#23B794" }}
+            className="item"
+          >
+            {formatPersistence(Math.abs(beer.persistence))}
+          </p>
+          <p className={`${styles.beerText} item`}>
+            {formatPrice(beer.averagePrice)}
+          </p>
+          <p className={`${styles.beerText} item`}>{beer.averagePosition}</p>
         </div>
       ))}
     </div>

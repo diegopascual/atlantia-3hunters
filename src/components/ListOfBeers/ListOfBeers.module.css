@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 34.1rem repeat(4, 1fr);
+  grid-template-columns: 45rem repeat(4, 1fr);
   place-items: center;
 }
 
@@ -11,9 +11,17 @@
   border-radius: 4px 4px 0 0;
 }
 
+.gridTitle {
+  color: #01172c;
+}
+
 .gridRow {
   composes: grid;
   grid-template-rows: 16rem;
+}
+
+.gridRow:nth-of-type(2n) {
+  background-color: #ffffff;
 }
 
 .gridRow:nth-of-type(2n + 1) {
@@ -29,4 +37,12 @@
 .beerImg {
   width: 12.1rem;
   margin-right: 2rem;
+}
+
+.beerName {
+  color: #565657;
+}
+
+.beerText {
+  color: #656566;
 }
