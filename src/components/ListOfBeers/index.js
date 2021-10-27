@@ -1,10 +1,21 @@
 import React from "react";
+import Loader from "components/Loader";
+import Error from "components/Error";
 import useBeers from "hooks/useBeers";
 import { formatPersistence, formatPrice } from "utils/formatUnits";
 import styles from "./ListOfBeers.module.css";
 
 const ListOfBeers = () => {
   const { loading, error, beers } = useBeers();
+
+  if (!beers) {
+    return (
+      <>
+        {loading && <Loader />}
+        {error && <Error message={error} />}
+      </>
+    );
+  }
 
   return (
     <div className={styles.beersGrid}>
