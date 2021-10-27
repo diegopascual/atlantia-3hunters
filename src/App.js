@@ -1,8 +1,11 @@
+import Header from "components/Header";
+import ListOfBeers from "components/ListOfBeers";
 import styles from "./App.module.css";
 
 function App() {
   return (
     <>
+      <Header />
       <h1 className="title">Titulo principal</h1>
       <h2 className="subtitle">Subtitle</h2>
       <section className="section">section</section>
@@ -14,6 +17,7 @@ function App() {
         letters, as opposed to using 'Content here, content here', making it
         look like readable English
       </p>
+      <ListOfBeers />
     </>
   );
 }
