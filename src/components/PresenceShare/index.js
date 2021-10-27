@@ -14,6 +14,9 @@ const PresenceShare = () => {
       enabled: false,
     },
     legend: {
+      fontSize: "14px",
+      fontFamily: "Hind, sans-serif",
+      fontWeight: 400,
       offsetY: 50,
     },
   };

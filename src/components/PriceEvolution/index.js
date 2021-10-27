@@ -17,11 +17,26 @@ const PriceEvolution = () => {
     stroke: {
       curve: "smooth",
     },
+    legend: {
+      fontSize: "14px",
+      fontFamily: "Hind, sans-serif",
+      fontWeight: 400,
+    },
     xaxis: {
       categories: categories,
+      labels: {
+        style: {
+          fontFamily: "Hind, sans-serif",
+          cssClass: "t-small t-regular",
+        },
+      },
     },
     yaxis: {
       labels: {
+        style: {
+          fontFamily: "Hind, sans-serif",
+          cssClass: "t-small t-regular",
+        },
         formatter: function (val) {
           return `$${val}`;
         },
@@ -44,7 +59,15 @@ const PriceEvolution = () => {
     );
   }
 
-  return <Chart options={options} series={series} type="line" width="868" />;
+  return (
+    <Chart
+      options={options}
+      series={series}
+      type="line"
+      width="868"
+      height="407"
+    />
+  );
 };
 
 export default PriceEvolution;

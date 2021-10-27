@@ -26,6 +26,7 @@
 
 - [React](https://reactjs.org/)
 - [CSS Modules](https://github.com/css-modules/css-modules)
+- [APEXCHARTS](https://apexcharts.com/)
 
 ## How To Use
 

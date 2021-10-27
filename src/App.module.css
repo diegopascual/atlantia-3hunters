@@ -1,0 +1,19 @@
+.main {
+  padding: 2rem 2.8rem 12.1rem;
+  background-color: #f0f6ff;
+}
+
+.charts {
+  margin-top: 2rem;
+  margin-bottom: 3.6rem;
+  display: grid;
+  grid-template-columns: 86.8rem 50rem;
+  column-gap: 2rem;
+}
+
+.chart {
+  height: 40.7rem;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+}

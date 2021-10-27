@@ -8,9 +8,25 @@ function App() {
   return (
     <>
       <Header />
-      <PriceEvolution />
-      <PresenceShare />
-      <ListOfBeers />
+      <main className={styles.main}>
+        <h2 className="title">General Perfomance Analysis</h2>
+        <div className={styles.charts}>
+          <div>
+            <h3 className="section">Price Evolution</h3>
+            <div className={styles.chart}>
+              <PriceEvolution />
+            </div>
+          </div>
+          <div>
+            <h3 className="section">Presence Share by Product</h3>
+            <div className={styles.chart}>
+              <PresenceShare />
+            </div>
+          </div>
+        </div>
+        <h3 className="section">Comparative Analysis</h3>
+        <ListOfBeers />
+      </main>
     </>
   );
 }
